@@ -1,0 +1,449 @@
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- daisyUi  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- aos  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- tittle -->
+    <title>Rownak-Portfolio</title>
+    <style> 
+        #myDIV {
+          background: rgb(124, 211, 240);
+          animation: mymove 3s infinite;
+        }
+        
+        @keyframes mymove {
+          50% {background-color: rgb(3, 153, 212);}
+        }
+
+        #myDIV2 {
+            background: rgb(124, 211, 240);
+            width: 100px;
+            height: 100px;
+            color: white;
+            animation: mymove2 3s infinite;
+            box-shadow: 0 0 50px 10px #0ff;
+        }
+
+        @keyframes mymove2 {
+            50% {transform: rotate(180deg);}
+            50% {background-color: rgb(3, 153, 212);}
+        }
+
+
+        @media (max-width: 900px) {
+
+            #myDIV2 {
+            background: rgb(124, 211, 240);
+            width: 100px;
+            height: 100px;
+            color: white;
+            box-shadow: 0 0 50px 10px #0ff;
+            animation: mymove2 3s infinite;
+        }
+
+            @keyframes mymove2 {
+                50% {transform: rotate(180deg);}
+                50% {background-color: rgb(3, 153, 212);}
+            }
+        }
+
+    </style>
+</head>
+<body class="">
+    <div class="container max-w-screen mx-auto">
+        <!-- navbar  -->
+        <div class="container top-0 fixed z-30">
+            <!-- nav 1  -->
+            <div class="navbar hidden lg:flex backdrop-blur-sm bg-white/30 border-b-2 border-blue-600">
+                <div class="navbar-start flex-1">
+                    <a href="#home" class="btn btn-ghost text-xl">Rownak</a>
+                </div>
+                <div class="navbar-end flex-1">
+                    <a href="#home" class="p-3 hover:text-blue-800 text-blck">HOME</a>
+                    <a href="#about" class="p-3 hover:text-blue-800 text-blck">ABOUT</a>
+                    <a href="#skills" class="p-3 hover:text-blue-800 text-blck">SKILLS</a>
+                    <a href="#services" class="p-3 hover:text-blue-800 text-blck">SERVICES</a>
+                    <a href="#projects" class="p-3 hover:text-blue-800 text-blck">PROJECTS</a>
+                    <a href="#contact" class="p-3 hover:text-blue-800 text-blck">CONTACT</a>
+                </div>
+            </div>
+            <!-- nav 2  -->
+            <div class="lg:hidden navbar backdrop-blur-sm bg-white/30 border-b-2 border-blue-600">
+                <div class="drawer">
+                    <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+                    <div class="drawer-content">
+                      <!-- Page content here -->
+                      <label for="my-drawer" class="btn bg-transparent drawer-button"><i class="fa-solid fa-bars"></i></label>
+                    </div> 
+                    <div class="drawer-side">
+                      <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                      <ul class="menu p-4 min-h-full backdrop-blur-sm bg-white/60 text-base-content">
+                        <!-- Sidebar content here -->
+                        <li><a href="#home" class="p-2 px-10 m-1 hover:text-blue-800 text-blck">HOME</a></li>
+                        <li><a href="#about" class="p-2 px-10 m-1 hover:text-blue-800 text-blck">ABOUT</a></li>
+                        <li><a href="#skills" class="p-2 px-10 m-1 hover:text-blue-800 text-blck">SKILLS</a></li>
+                        <li><a href="#services" class="p-2 px-10 m-1 hover:text-blue-800 text-blck">SERVICES</a></li>
+                        <li><a href="#projects" class="p-2 px-10 m-1 hover:text-blue-800 text-blck">PROJECTS</a></li>
+                        <li><a href="#contact" class="p-2 px-10 m-1 hover:text-blue-800 text-blck">CONTACT</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                <div class="navbar-end">
+                    <a href="#home" class="btn btn-ghost text-xl">Rownak</a>
+                </div>
+            </div>
+        </div>
+        <!-- hero  -->
+        <div class="container pt-12 lg:pt-8 bg-gradient-to-b from-blue-500" id="home">
+            <div class="hero min-h-screen">
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                    <img src="pic.jpg" class="w-1/2 sm:w-1/2 md:w-1/2 lg:w-1/3 rounded-lg shadow-2xl m-7 hover:drop-shadow-2xl cursor-pointer" />
+                    <div class="m-7">
+                        <h1 class="text-5xl font-bold">I'm Rownak Worthy!</h1>
+                        <p class="py-6">I'm professional Web Developer & Web Designer based in Blangladesh working on different projects. I can build awesome Designs with different programming languages.</p>
+                        <button id="myDIV" class="btn px-16">Hire Me</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about me  -->
+        <div data-aos="fade-up" data-aos-duration="1000" class="container mb-9 flex justify-center relative" id="about">
+            <div class="card lg:card-side gap-4 grid lg:grid-cols-2 w-3/4">
+                <figure><img class="rounded-lg" src="pic.jpg" alt="Album"/></figure>
+                <div id="myDIV2" class="absolute animate-ping inline-flex rounded-2xl">
+                </div>
+                <div class="card-body">
+                    <p class="font-bold text-3xl text-blue-500">ABOUT ME</p>
+                    <p class="py-6">I'm professional Web Developer & Web Designer based in Bangladesh working on different projects. I can build awesome Designs with different programming languages.</p>
+                    <p class=""><span class="font-bold text-blue-500 text-lg">Name:</span> Rownak Worthy</p>
+                    <p class=""><span class="font-bold text-blue-500 text-lg">Birthdate:</span> April 30, 2003</p>
+                    <p class=""><span class="font-bold text-blue-500 text-lg">Languages:</span> English, Bangla</p>
+                    <p class=""><span class="font-bold text-blue-500 text-lg">Address:</span> Bangladesh</p>
+                    <p class=""><span class="font-bold text-blue-500 text-lg">Email:</span> gulshanworthy@gmail.com</p>
+                    <p class=""><span class="font-bold text-blue-500 text-lg">Phone:</span> +880 1705 265567</p>
+                    </div>
+            </div>
+        </div>
+        <!-- education -->
+        <div data-aos="fade-up" data-aos-duration="1000" class="container p-10 mt-20">
+            <div class="container text-center mb-20">
+                <p class="font-bold mx-10 text-4xl text-blue-500">Education</p>
+            </div>
+            <!-- lg ul  -->
+            <ul class="timeline timeline-snap-icon hidden md:flex timeline-vertical ">
+                <li data-aos="fade-up" data-aos-duration="1000">
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-blue-500"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <div class="timeline-start md:text-end mb-10 bg-gradient-to-t from-blue-500 p-6 rounded-2xl">
+                        <time class="font-mono italic">2023</time>
+                        <div class="text-lg font-black">Her Power Course</div>
+                        <p class="">A Govt. Web Development Course.</p>
+                    </div>
+                    <hr/>
+                </li>
+                <li data-aos="fade-up" data-aos-duration="1000">
+                    <hr />
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-blue-500"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <div class="timeline-end mb-10 bg-gradient-to-t from-blue-500 p-6 rounded-2xl">
+                        <time class="font-mono italic">2023</time>
+                        <div class="text-lg font-black">B.A History</div>
+                        <p class="">B.a honours first year admitted into Brindaban Govt. Collage.</p>
+                    </div>
+                    <hr />
+                </li>
+                <li data-aos="fade-up" data-aos-duration="1000">
+                    <hr />
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-blue-500"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <div class="timeline-start md:text-end mb-10 bg-gradient-to-t from-blue-500 p-6 rounded-2xl">
+                        <time class="font-mono italic">2022</time>
+                        <div class="text-lg font-black">INTERMEDIATE DEGREE</div>
+                        <p class="">From Sylhet Govt. Women's collage.</p>
+                    </div>
+                    <hr />
+                </li>
+                <li data-aos="fade-up" data-aos-duration="1000">
+                    <hr />
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-blue-500 h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <div class="timeline-end mb-10 bg-gradient-to-t from-blue-500 p-6 rounded-2xl">
+                        <time class="font-mono italic">2020</time>
+                        <div class="text-lg font-black">MATRIC DEGREE</div>
+                        <p class="">From Shaistaganj Islami Academy And High School.</p>
+                    </div>
+                    <hr />
+                </li>
+            </ul>
+            <!-- sm ul  -->
+            <ul class="timeline timeline-snap-icon md:hidden timeline-compact timeline-vertical ">
+                <li data-aos="fade-up" data-aos-duration="1000">
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-blue-500"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <div class="timeline-start md:text-end mb-10 bg-gradient-to-t from-blue-500 p-6 rounded-2xl">
+                        <time class="font-mono italic">2023</time>
+                        <div class="text-lg font-black">Her Power Course</div>
+                        <p class="">A Govt. Web Development Course.</p>
+                    </div>
+                    <hr/>
+                </li>
+                <li data-aos="fade-up" data-aos-duration="1000">
+                    <hr />
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-blue-500"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <div class="timeline-end mb-10 bg-gradient-to-t from-blue-500 p-6 rounded-2xl">
+                        <time class="font-mono italic">2023</time>
+                        <div class="text-lg font-black">B.A History</div>
+                        <p class="">B.a honours first year admitted into Brindaban Govt. Collage.</p>
+                    </div>
+                    <hr />
+                </li>
+                <li data-aos="fade-up" data-aos-duration="1000">
+                    <hr />
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-blue-500"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <div class="timeline-start md:text-end mb-10 bg-gradient-to-t from-blue-500 p-6 rounded-2xl">
+                        <time class="font-mono italic">2022</time>
+                        <div class="text-lg font-black">INTERMEDIATE DEGREE</div>
+                        <p class="">From Sylhet Govt. Women's collage.</p>
+                    </div>
+                    <hr />
+                </li>
+                <li data-aos="fade-up" data-aos-duration="1000">
+                    <hr />
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-blue-500 h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <div class="timeline-end mb-10 bg-gradient-to-t from-blue-500 p-6 rounded-2xl">
+                        <time class="font-mono italic">2020</time>
+                        <div class="text-lg font-black">MATRIC DEGREE</div>
+                        <p class="">From Shaistaganj Islami Academy And High School.</p>
+                    </div>
+                    <hr />
+                </li>
+            </ul>
+        </div>
+        <!-- skill  -->
+        <div data-aos="fade-up" data-aos-duration="1000" class="container p-10 mt-10 mb-10" id="skills">
+            <div class="container text-center mb-20">
+                <p class="font-bold mx-10 text-4xl text-blue-500">MY SKILLS</p>
+            </div>
+            <div class="container grid md:grid-cols-4 gap-4 justify-items-center">
+                <div data-aos="fade-up" data-aos-duration="1000" class="bg-blue-200 p-5 w-60 rounded-3xl">
+                    <p class="text-2xl text-black p-2">HTML 5</p>
+                    <div class="radial-progress" style="--value:90; --size:12rem; --thickness: 2rem; color: rgb(3, 153, 212);" role="progressbar">90%</div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="bg-blue-200 p-5 w-60 rounded-3xl">
+                    <p class="text-2xl text-black p-2">CSS 5</p>
+                    <div class="radial-progress" style="--value:70; --size:12rem; --thickness: 2rem; color: rgb(3, 153, 212);" role="progressbar">70%</div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="bg-blue-200 p-5 w-60 rounded-3xl">
+                    <p class="text-2xl text-black p-2">BOOTSTRAP</p>
+                    <div class="radial-progress" style="--value:95; --size:12rem; --thickness: 2rem; color: rgb(3, 153, 212);" role="progressbar">95%</div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="bg-blue-200 p-5 w-60 rounded-3xl">
+                    <p class="text-2xl text-black p-2">JAVASCRIPT</p>
+                    <div class="radial-progress" style="--value:10; --size:12rem; --thickness: 2rem; color: rgb(3, 153, 212);" role="progressbar">10%</div>
+                </div>
+            </div>
+        </div>
+        <!-- services  -->
+        <div data-aos="fade-up" data-aos-duration="1000" class="container p-10 mt-10 mb-10" id="services">
+            <div class="container text-center mb-20">
+                <p class="font-bold mx-10 text-4xl text-blue-500">SERVICES</p>
+            </div>
+            <div class="container grid lg:grid-cols-3 gap-4 justify-items-center">
+                <div data-aos="fade-up" data-aos-duration="1000" class="text-center border-2 p-5 border-black rounded-lg hover:border-blue-600">
+                    <p class="text-2xl font-semibold p-5 text-black">Web Design</p>
+                    <p class="p-5">A large company needs perfectly designed website for expressing themselves. And I can help you with that. My goal is to listen and understand the goals of my customers.</p>
+                </div>
+                <div  data-aos="fade-up" data-aos-duration="1000" class="text-center border-2 p-5 border-black rounded-lg hover:border-blue-600">
+                    <p class="text-2xl font-semibold p-5 text-black">Responsive Design</p>
+                    <p class="p-5">A large company needs perfectly designed website for expressing themselves. And I can help you with that. My goal is to listen and understand the goals of my customers.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="text-center border-2 p-5 border-black rounded-lg hover:border-blue-600">
+                    <p class="text-2xl font-semibold p-5 text-black">Web Application</p>
+                    <p class="p-5">A large company needs perfectly designed website for expressing themselves. And I can help you with that. My goal is to listen and understand the goals of my customers.</p>
+                </div>
+            </div>
+        </div>
+        <!-- ad of service  -->
+        <div data-aos="fade-up" data-aos-duration="1000" class="container mt-10 mb-10">
+            <div class="hero" style="background-image: url(https://a-static.besthdwallpaper.com/pink-keyboard-wallpaper-1680x1050-12170_5.jpg);">
+                <div class="hero-overlay bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                    <div class="">
+                        <h1 class="text-4xl font-bold p-6">Have a Project?</h1>
+                    <p class="p-6">Clients satisfaction is my first priority and it will be always. I am available 24/7 you can contact me anytime</p>
+                    <button id="myDIV" class="btn px-16 m-6">Hire Me</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- projects  -->
+        <div data-aos="fade-up" data-aos-duration="1000" class="container p-10 mt-10 mb-10" id="projects">
+            <div class="container text-center mb-20">
+                <p class="font-bold mx-10 text-4xl text-blue-500">PROJECTS</p>
+            </div>
+            <div class="container grid lg:grid-cols-3 gap-x-2 gap-y-10 justify-items-center">
+                <div data-aos="fade-up" data-aos-duration="1000" class="card card-compact md:w-96 bg-base-100 shadow-xl">
+                    <a href="https://decor-raw.netlify.app/" class="">
+                        <span class="absolute w-full p-20 text-3xl font-semibold opacity-0 hover:opacity-100 hover:bg-blue-200/80 flex justify-center items-center text-blue-500">EXPLORE</span>
+                        <figure><img src="Screenshot (6).png" alt="Shoes" /></figure>
+                    </a>
+                    <div class="card-body">
+                        <h2 class="card-title">Decor</h2>
+                        <p>A website for interior designing company.</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="card card-compact md:w-96 bg-base-100 shadow-xl">
+                    <a href="https://weather-app-raw-n.netlify.app/" class="">
+                        <span class="absolute w-full p-20 text-3xl font-semibold opacity-0 hover:opacity-100 hover:bg-blue-200/80 flex justify-center items-center text-blue-500">EXPLORE</span>
+                        <figure><img src="Screenshot (7).png" alt="Shoes" /></figure>
+                    </a>
+                    <div class="card-body">
+                        <h2 class="card-title">Weather App</h2>
+                        <p>A website to display weather of a certain place.</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="card card-compact md:w-96 bg-base-100 shadow-xl">
+                    <a href="https://carpro-raw.netlify.app/" class="">
+                        <span class="absolute w-full p-20 text-3xl font-semibold opacity-0 hover:opacity-100 hover:bg-blue-200/80 flex justify-center items-center text-blue-500">EXPLORE</span>
+                        <figure><img src="Screenshot (8).png" alt="Shoes" /></figure>
+                    </a>
+                    <div class="card-body">
+                        <h2 class="card-title">CarPro</h2>
+                        <p>A website for car sale and rent company.</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="card card-compact md:w-96 bg-base-100 shadow-xl">
+                    <a href="https://login-raw.netlify.app/" class="">
+                        <span class="absolute w-full p-20 text-3xl font-semibold opacity-0 hover:opacity-100 hover:bg-blue-200/80 flex justify-center items-center text-blue-500">EXPLORE</span>
+                        <figure><img src="Screenshot (9).png" alt="Shoes" /></figure>
+                    </a>
+                    <div class="card-body">
+                        <h2 class="card-title">LogIn</h2>
+                        <p>A website for saving log in information of user.</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="card card-compact md:w-96 bg-base-100 shadow-xl">
+                    <a href="https://color-generator-raw.netlify.app/" class="">
+                        <span class="absolute w-full p-20 text-3xl font-semibold opacity-0 hover:opacity-100 hover:bg-blue-200/80 flex justify-center items-center text-blue-500">EXPLORE</span>
+                        <figure><img src="Screenshot (10).png" alt="Shoes" /></figure>
+                    </a>
+                    <div class="card-body">
+                        <h2 class="card-title">Color Generator</h2>
+                        <p>A website for making custome gradient color.</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="card card-compact md:w-96 bg-base-100 shadow-xl">
+                    <a href="https://hero-travel-raw.netlify.app/" class="">
+                        <span class="absolute w-full p-20 text-3xl font-semibold opacity-0 hover:opacity-100 hover:bg-blue-200/80 flex justify-center items-center text-blue-500">EXPLORE</span>
+                        <figure><img src="Screenshot (11).png" alt="Shoes" /></figure>
+                    </a>
+                    <div class="card-body">
+                        <h2 class="card-title">Travel Hero</h2>
+                        <p>A website for travel reservation.</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="card card-compact md:w-96 bg-base-100 shadow-xl">
+                    <a href="https://basket-raw.netlify.app/" class="">
+                        <span class="absolute w-full p-20 text-3xl font-semibold opacity-0 hover:opacity-100 hover:bg-blue-200/80 flex justify-center items-center text-blue-500">EXPLORE</span>
+                        <figure><img src="Screenshot (12).png" alt="Shoes" /></figure>
+                    </a>
+                    <div class="card-body">
+                        <h2 class="card-title">Basket</h2>
+                        <p>A website for organic vegies.</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="card card-compact md:w-96 bg-base-100 shadow-xl">
+                    <a href="https://rownak-portfolio.netlify.app/" class="">
+                        <span class="absolute w-full p-20 text-3xl font-semibold opacity-0 hover:opacity-100 hover:bg-blue-200/80 flex justify-center items-center text-blue-500">EXPLORE</span>
+                        <figure><img src="Screenshot (13).png" alt="Shoes" /></figure>
+                    </a>
+                    <div class="card-body">
+                        <h2 class="card-title">Porfolio</h2>
+                        <p>A portfolio website using Bootstrap.</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="card card-compact md:w-96 bg-base-100 shadow-xl">
+                    <a href="https://blue-moon-hotel.netlify.app/" class="">
+                        <span class="absolute w-full p-20 text-3xl font-semibold opacity-0 hover:opacity-100 hover:bg-blue-200/80 flex justify-center items-center text-blue-500">EXPLORE</span>
+                        <figure><img src="Screenshot (14).png" alt="Shoes" /></figure>
+                    </a>
+                    <div class="card-body">
+                        <h2 class="card-title">Blue Moon Hotel</h2>
+                        <p>A website for hotel reservation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- contact  -->
+        <div data-aos="fade-up" data-aos-duration="1000" class="container p-10 mt-10 mb-10" id="contact">
+            <div class="container text-center mb-20">
+                <p class="font-bold mx-10 text-4xl text-blue-500" id="projects">CONTACT</p>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" class="hero md:p-10" style="background-image: url(https://w0.peakpx.com/wallpaper/138/244/HD-wallpaper-gray-and-black-laptop-computer-on-surface.jpg);">
+                <div class="hero-overlay bg-opacity-80 p-10">
+                    <div class="hero-body grid lg:grid-cols-2 gap-4">
+                        <form data-aos="fade-up" data-aos-duration="1000" class="md:p-6">
+                            <p class="text-4xl font-bold py-4 text-center text-white">Get In Touch</p>
+                            <div class="p-3">
+                                <input type="text" placeholder="Your name" class="p-2 w-full border-2 border-blue-300 bg-transparent">
+                            </div>
+                            <div class="p-3">
+                                <input type="email" placeholder="Your E-mail" class="p-2 w-full border-2 border-blue-300 bg-transparent">
+                            </div>
+                            <div class="p-3">
+                                <input type="text" placeholder="Subject" class="p-2 w-full border-2 border-blue-300 bg-transparent">
+                            </div>
+                            <div class="p-3">
+                                <textarea cols="30" rows="5" placeholder="Enter Your Messege" class="p-2 w-full border-2 border-blue-300 bg-transparent"></textarea>
+                            </div>
+                            <div class="p-3">
+                                <button id="myDIV" class="btn px-16">Hire Me</button>
+                            </div>
+                        </form>
+                        <div data-aos="fade-up" data-aos-duration="1000" class="container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1818.4924120556643!2d91.46713677112083!3d24.277260598083267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37515d690562da01%3A0x2495e97b136dd406!2sShaistaganj%20High-School%20Road!5e0!3m2!1sen!2sbd!4v1708447143603!5m2!1sen!2sbd" class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer  -->
+        <footer data-aos="fade-up" data-aos-duration="1000" class="footer footer-center p-10 bg-gradient-to-t from-blue-500">
+            <aside>
+                <div class="">
+                    <a href="#home" class="btn btn-ghost text-5xl m-3">Rownak</a>
+                </div> 
+                <p>Copyright © 2024 - All right reserved</p>
+            </aside> 
+            <nav>
+                <div class="grid grid-flow-col gap-4">
+                    <a href="https://www.facebook.com/rownakraw.worthy?mibextid=ZbWKwL" target="_blank" class="btn btn-ghost"><i class="fa-brands fa-facebook text-4xl"></i></a>
+                    <a href="https://github.com/worthy1819" target="_blank" class="btn btn-ghost"><i class="fa-brands fa-github text-4xl"></i></a>
+                    <a href="#" target="_blank" class="btn btn-ghost"><i class="fa-brands fa-linkedin text-4xl"></i></a>
+                </div>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
