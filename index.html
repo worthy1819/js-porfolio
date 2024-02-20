@@ -13,6 +13,11 @@
     <!-- tittle -->
     <title>Rownak-Portfolio</title>
     <style> 
+        html {
+            scroll-behavior: smooth;
+        }
+
+
         #myDIV {
           background: rgb(124, 211, 240);
           animation: mymove 3s infinite;
@@ -71,7 +76,7 @@
                     <a href="#skills" class="p-3 hover:text-blue-800 text-blck">SKILLS</a>
                     <a href="#services" class="p-3 hover:text-blue-800 text-blck">SERVICES</a>
                     <a href="#projects" class="p-3 hover:text-blue-800 text-blck">PROJECTS</a>
-                    <a href="#contact" class="p-3 hover:text-blue-800 text-blck">CONTACT</a>
+                    <a href="#contact"  class="p-3 hover:text-blue-800 text-blck">CONTACT</a>
                 </div>
             </div>
             <!-- nav 2  -->
@@ -443,7 +448,9 @@
         </footer>
     </div>
     <script>
-        AOS.init();
+        AOS.init({
+            once: true
+        });
     </script>
 </body>
 </html>
