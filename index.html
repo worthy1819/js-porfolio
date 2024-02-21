@@ -2,6 +2,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font family for logo  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    <!-- font family  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <!-- daisyUi  -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -11,8 +19,28 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- tittle -->
-    <title>Rownak-Portfolio</title>
+    <title>Rownak - Portfolio</title>
     <style> 
+
+        #logo {
+            font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: italic;       
+        }
+
+        body {
+            font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            }
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
         html {
             scroll-behavior: smooth;
         }
@@ -62,26 +90,26 @@
 
     </style>
 </head>
-<body class="">
-    <div class="container max-w-screen mx-auto">
-        <!-- navbar  -->
-        <div class="container top-0 fixed z-30">
-            <!-- nav 1  -->
-            <div class="navbar hidden lg:flex backdrop-blur-sm bg-white/30 border-b-2 border-blue-600">
+<body>
+    
+    <!-- navbar  -->
+    <div class="container top-0 w-full fixed z-30 max-w-screen mx-auto">
+        <!-- nav 1  -->
+        <div class="navbar w-full hidden lg:flex backdrop-blur-lg bg-white/30 border-b-2 border-blue-600">
                 <div class="navbar-start flex-1">
-                    <a href="#home" class="btn btn-ghost text-xl">Rownak</a>
+                    <a href="#home" class="text-4xl"><span id="logo">Rownak</span></a>
                 </div>
                 <div class="navbar-end flex-1">
-                    <a href="#home" class="p-3 hover:text-blue-800 text-blck">HOME</a>
-                    <a href="#about" class="p-3 hover:text-blue-800 text-blck">ABOUT</a>
-                    <a href="#skills" class="p-3 hover:text-blue-800 text-blck">SKILLS</a>
-                    <a href="#services" class="p-3 hover:text-blue-800 text-blck">SERVICES</a>
-                    <a href="#projects" class="p-3 hover:text-blue-800 text-blck">PROJECTS</a>
-                    <a href="#contact"  class="p-3 hover:text-blue-800 text-blck">CONTACT</a>
+                    <a href="#home" class="p-3 hover:text-blue-800 text-black">HOME</a>
+                    <a href="#about" class="p-3 hover:text-blue-800 text-black">ABOUT</a>
+                    <a href="#skills" class="p-3 hover:text-blue-800 text-black">SKILLS</a>
+                    <a href="#services" class="p-3 hover:text-blue-800 text-black">SERVICES</a>
+                    <a href="#projects" class="p-3 hover:text-blue-800 text-black">PROJECTS</a>
+                    <a href="#contact"  class="p-3 hover:text-blue-800 text-black">CONTACT</a>
                 </div>
-            </div>
-            <!-- nav 2  -->
-            <div class="lg:hidden navbar backdrop-blur-sm bg-white/30 border-b-2 border-blue-600">
+        </div>
+        <!-- nav 2  -->
+        <div class="lg:hidden w-full navbar backdrop-blur-lg bg-white/30 border-b-2 border-blue-600">
                 <div class="drawer">
                     <input id="my-drawer" type="checkbox" class="drawer-toggle" />
                     <div class="drawer-content">
@@ -90,42 +118,45 @@
                     </div> 
                     <div class="drawer-side">
                       <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-                      <ul class="menu p-4 min-h-full backdrop-blur-sm bg-white/60 text-base-content">
+                      <ul class="menu p-4 min-h-full backdrop-blur-lg bg-white/70 text-base-content">
                         <!-- Sidebar content here -->
-                        <li><a href="#home" class="p-2 px-10 m-1 hover:text-blue-800 text-blck">HOME</a></li>
-                        <li><a href="#about" class="p-2 px-10 m-1 hover:text-blue-800 text-blck">ABOUT</a></li>
-                        <li><a href="#skills" class="p-2 px-10 m-1 hover:text-blue-800 text-blck">SKILLS</a></li>
-                        <li><a href="#services" class="p-2 px-10 m-1 hover:text-blue-800 text-blck">SERVICES</a></li>
-                        <li><a href="#projects" class="p-2 px-10 m-1 hover:text-blue-800 text-blck">PROJECTS</a></li>
-                        <li><a href="#contact" class="p-2 px-10 m-1 hover:text-blue-800 text-blck">CONTACT</a></li>
+                        <li><a href="#home" class="p-2 px-10 m-1 hover:text-blue-800 text-black">HOME</a></li>
+                        <li><a href="#about" class="p-2 px-10 m-1 hover:text-blue-800 text-black">ABOUT</a></li>
+                        <li><a href="#skills" class="p-2 px-10 m-1 hover:text-blue-800 text-black">SKILLS</a></li>
+                        <li><a href="#services" class="p-2 px-10 m-1 hover:text-blue-800 text-black">SERVICES</a></li>
+                        <li><a href="#projects" class="p-2 px-10 m-1 hover:text-blue-800 text-black">PROJECTS</a></li>
+                        <li><a href="#contact" class="p-2 px-10 m-1 hover:text-blue-800 text-black">CONTACT</a></li>
                       </ul>
                     </div>
                   </div>
                 <div class="navbar-end">
-                    <a href="#home" class="btn btn-ghost text-xl">Rownak</a>
+                    <a href="#home" class="text-3xl"><span id="logo">Rownak</span></a>
+                </div>
+        </div>
+    </div>
+    <!-- hero  -->
+    <div class="container pt-12 w-full bg-gradient-to-b from-blue-500" id="home">
+        <div class="hero min-h-screen">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+                <img src="pic.jpg" class="w-1/2 sm:w-1/2 md:w-1/2 lg:w-1/3 rounded-lg shadow-2xl m-7 hover:drop-shadow-2xl cursor-pointer" />
+                <div class="m-7 md:text-base text-sm">
+                    <h1 class="md:text-5xl text-3xl font-bold">I'm Rownak Worthy!</h1>
+                    <p class="py-6">I'm professional Web Developer & Web Designer based in Blangladesh working on different projects. I can build awesome Designs with different programming languages.</p>
+                    <a id="myDIV" class="btn px-16" href="https://drive.google.com/file/d/1IqquNFrDYaIdWwu7HNYi-uTivxPOiG0W/view?usp=sharing" target="_blank">Resume</a>
                 </div>
             </div>
         </div>
-        <!-- hero  -->
-        <div class="container pt-12 lg:pt-8 bg-gradient-to-b from-blue-500" id="home">
-            <div class="hero min-h-screen">
-                <div class="hero-content flex-col lg:flex-row-reverse">
-                    <img src="pic.jpg" class="w-1/2 sm:w-1/2 md:w-1/2 lg:w-1/3 rounded-lg shadow-2xl m-7 hover:drop-shadow-2xl cursor-pointer" />
-                    <div class="m-7">
-                        <h1 class="text-5xl font-bold">I'm Rownak Worthy!</h1>
-                        <p class="py-6">I'm professional Web Developer & Web Designer based in Blangladesh working on different projects. I can build awesome Designs with different programming languages.</p>
-                        <button id="myDIV" class="btn px-16">Hire Me</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
+
+    <!-- main section  -->
+    <div class="container max-w-screen mx-auto">
         <!-- about me  -->
         <div data-aos="fade-up" data-aos-duration="1000" class="container mb-9 flex justify-center relative" id="about">
             <div class="card lg:card-side gap-4 grid lg:grid-cols-2 w-3/4">
                 <figure><img class="rounded-lg" src="pic.jpg" alt="Album"/></figure>
                 <div id="myDIV2" class="absolute animate-ping inline-flex rounded-2xl">
                 </div>
-                <div class="card-body">
+                <div class="card-body md:text-base text-sm">
                     <p class="font-bold text-3xl text-blue-500">ABOUT ME</p>
                     <p class="py-6">I'm professional Web Developer & Web Designer based in Bangladesh working on different projects. I can build awesome Designs with different programming languages.</p>
                     <p class=""><span class="font-bold text-blue-500 text-lg">Name:</span> Rownak Worthy</p>
@@ -134,7 +165,7 @@
                     <p class=""><span class="font-bold text-blue-500 text-lg">Address:</span> Bangladesh</p>
                     <p class=""><span class="font-bold text-blue-500 text-lg">Email:</span> gulshanworthy@gmail.com</p>
                     <p class=""><span class="font-bold text-blue-500 text-lg">Phone:</span> +880 1705 265567</p>
-                    </div>
+                </div>
             </div>
         </div>
         <!-- education -->
@@ -248,22 +279,18 @@
             <div class="container text-center mb-20">
                 <p class="font-bold mx-10 text-4xl text-blue-500">MY SKILLS</p>
             </div>
-            <div class="container grid md:grid-cols-4 gap-4 justify-items-center">
-                <div data-aos="fade-up" data-aos-duration="1000" class="bg-blue-200 p-5 w-60 rounded-3xl">
-                    <p class="text-2xl text-black p-2">HTML 5</p>
-                    <div class="radial-progress" style="--value:90; --size:12rem; --thickness: 2rem; color: rgb(3, 153, 212);" role="progressbar">90%</div>
+            <div class="container grid md:grid-cols-4 sm:grid-cols-2 gap-4 justify-items-center">
+                <div data-aos="fade-up" data-aos-duration="1000" class="bg-blue-200 p-5 rounded-3xl">
+                    <img src="html-5.png" alt="">
                 </div>
-                <div data-aos="fade-up" data-aos-duration="1000" class="bg-blue-200 p-5 w-60 rounded-3xl">
-                    <p class="text-2xl text-black p-2">CSS 5</p>
-                    <div class="radial-progress" style="--value:70; --size:12rem; --thickness: 2rem; color: rgb(3, 153, 212);" role="progressbar">70%</div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="bg-blue-200 p-5 rounded-3xl">
+                    <img src="css.png" alt="">
                 </div>
-                <div data-aos="fade-up" data-aos-duration="1000" class="bg-blue-200 p-5 w-60 rounded-3xl">
-                    <p class="text-2xl text-black p-2">BOOTSTRAP</p>
-                    <div class="radial-progress" style="--value:95; --size:12rem; --thickness: 2rem; color: rgb(3, 153, 212);" role="progressbar">95%</div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="bg-blue-200 p-5 rounded-3xl">
+                    <img src="bootstrap.png" alt="">
                 </div>
-                <div data-aos="fade-up" data-aos-duration="1000" class="bg-blue-200 p-5 w-60 rounded-3xl">
-                    <p class="text-2xl text-black p-2">JAVASCRIPT</p>
-                    <div class="radial-progress" style="--value:10; --size:12rem; --thickness: 2rem; color: rgb(3, 153, 212);" role="progressbar">10%</div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="bg-blue-200 p-5 rounded-3xl">
+                    <img src="js.png" alt="">
                 </div>
             </div>
         </div>
@@ -399,29 +426,29 @@
             </div>
         </div>
         <!-- contact  -->
-        <div data-aos="fade-up" data-aos-duration="1000" class="container p-10 mt-10 mb-10" id="contact">
+        <div data-aos="fade-up" data-aos-duration="1000" class="container md:p-10 mt-10 mb-10" id="contact">
             <div class="container text-center mb-20">
                 <p class="font-bold mx-10 text-4xl text-blue-500" id="projects">CONTACT</p>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" class="hero md:p-10" style="background-image: url(https://w0.peakpx.com/wallpaper/138/244/HD-wallpaper-gray-and-black-laptop-computer-on-surface.jpg);">
-                <div class="hero-overlay bg-opacity-80 p-10">
+                <div class="hero-overlay bg-opacity-80 md:p-10 p-2">
                     <div class="hero-body grid lg:grid-cols-2 gap-4">
                         <form data-aos="fade-up" data-aos-duration="1000" class="md:p-6">
                             <p class="text-4xl font-bold py-4 text-center text-white">Get In Touch</p>
                             <div class="p-3">
-                                <input type="text" placeholder="Your name" class="p-2 w-full border-2 border-blue-300 bg-transparent">
+                                <input id="name" type="text" placeholder="Your name" class="p-2 w-full border-2 border-blue-300 bg-transparent">
                             </div>
                             <div class="p-3">
-                                <input type="email" placeholder="Your E-mail" class="p-2 w-full border-2 border-blue-300 bg-transparent">
+                                <input id="email" type="email" placeholder="Your E-mail" class="p-2 w-full border-2 border-blue-300 bg-transparent">
                             </div>
                             <div class="p-3">
-                                <input type="text" placeholder="Subject" class="p-2 w-full border-2 border-blue-300 bg-transparent">
+                                <input id="sub" type="text" placeholder="Subject" class="p-2 w-full border-2 border-blue-300 bg-transparent">
                             </div>
                             <div class="p-3">
-                                <textarea cols="30" rows="5" placeholder="Enter Your Messege" class="p-2 w-full border-2 border-blue-300 bg-transparent"></textarea>
+                                <textarea id="text" cols="30" rows="5" placeholder="Enter Your Messege" class="p-2 w-full border-2 border-blue-300 bg-transparent"></textarea>
                             </div>
                             <div class="p-3">
-                                <button id="myDIV" class="btn px-16">Hire Me</button>
+                                <button id="myDIV" class="btn px-16">Submit</button>
                             </div>
                         </form>
                         <div data-aos="fade-up" data-aos-duration="1000" class="container">
@@ -435,7 +462,7 @@
         <footer data-aos="fade-up" data-aos-duration="1000" class="footer footer-center p-10 bg-gradient-to-t from-blue-500">
             <aside>
                 <div class="">
-                    <a href="#home" class="btn btn-ghost text-5xl m-3">Rownak</a>
+                    <a href="#home" class="text-5xl m-3"><span id="logo">Rownak</span></a>
                 </div> 
                 <p>Copyright © 2024 - All right reserved</p>
             </aside> 
